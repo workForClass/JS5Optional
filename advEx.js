@@ -15,3 +15,7 @@
 // a. take in an event parameter and check the event's target.
 // b. Using the target, it should change the target's text color to red.
 // c. BONUS BONUS : How can we make sure that clicking it twice will make the red go away?
+
+// Challenge (difficult, but use those console logs and you can problem solve it!): ------
+// How could we make it so that each list item was in a card from HTML? (hint: template literals)
+// How do we make it so that when anywhere on the item is clicked (even if on the text), the card's background color changes to a different colour, and then back again if clicked again?

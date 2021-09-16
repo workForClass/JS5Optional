@@ -23,10 +23,41 @@ let list = document.querySelector("#myList");
 for (i = 0; i < animalArray.length; i++) {
   string = `This animal is a ${animalArray[i].animal} and has ${animalArray[i]["number of legs"]} legs. `;
   let element = document.createElement("li");
-  element.innerHTML = string;
+
+  //-------------------challenge code for final challenge exercise----
+  // I also added the bootstrap link to my html, so now these classes mean something!
+  let html = `<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">${animalArray[i].animal}</h5>
+    <p class="card-text">${string}</p>
+  </div>
+</div>`;
+  element.addEventListener("click", function (event) {
+    // if statement that checks if the user clicked something that wasn't the card body, like the text
+    if (!event.target.classList.contains("card-body")) {
+      // if else statement that checks if its already blue, if it is the color changes back to whtie
+      // because user clicked something below the card body, we need to check its parent element's style if we want to check the card-body
+      if (event.target.parentNode.style.backgroundColor === "lightblue") {
+        event.target.parentNode.style.backgroundColor = "white";
+      } else {
+        event.target.parentNode.style.backgroundColor = "lightblue";
+      }
+    } // else the top if statement means the user DID click the card body
+    // if else statement that checks if its already blue, if it is the color changes back to whtie
+    else {
+      console.log(event.target.style.backgroundColor);
+      if (event.target.style.backgroundColor === "lightblue") {
+        event.target.style.backgroundColor = "white";
+      } else {
+        event.target.style.backgroundColor = "lightblue";
+      }
+    }
+  });
+  // --------------------end of challenge code -----
+
+  element.innerHTML = html; //without challenge html should be string
   element.setAttribute("id", "item_" + i);
   element.addEventListener("click", function (event) {
-    console.log(event.target.style.color);
     if (event.target.style.color === "red") {
       event.target.style.color = "black";
     } else {
