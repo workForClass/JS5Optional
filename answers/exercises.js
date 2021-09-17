@@ -16,7 +16,7 @@ mainSelected.style.backgroundColor = "lightblue";
 mainSelected.addEventListener("click", function () {
   console.log("I work!");
   mainSelected.style.backgroundColor = "yellow";
-  mainSelected.style.innerHTML = "I'm feeling yellow!";
+  document.querySelector("#paragraphOne").innerHTML = "I'm feeling yellow!";
 });
 // 8. On click, the element's background color should change to yellow
 // 9. On click, the element's inner html text should change to I'm feeling yellow!

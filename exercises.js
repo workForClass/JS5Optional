@@ -1,15 +1,15 @@
 //Setting up the html file
 // 1. Link this JavaScript file to the index.html file.
-// 2. Inside the HTML file, add an id attribute equal to 'mainContent' to the main tag.
+// 2. Inside the HTML file, add an id attribute equal to 'mainContent' to the main tag.Also add a paragraph with an id of 'paragraphOne' and text 'i'm feeling blue!'
 
 //Getting into our JavaScript code
-// 3. select the mainContent element using a JS ReadableStreamDefaultController and assign it to a variable.JS
+// 3. select the mainContent element using a JS Document selector and assign it to a variable.
 // 4. console.log the variable, open and inspect the html file in the browser console to ensure you have selected the right element
 //5. Using the variable, change the width of the element to 100% and height to 100vh using the JS DOM style property.
 // 6. Using JS, change the background color of the element to lightblue.
 // 7. Add an event listener to this element that looks for a user to click the div.
 // 8. On click, the element's background color should change to yellow
-// 9. On click, the element's inner html text should change to I'm feeling yellow!
+// 9. On click, the element's paragraph's text should change to I'm feeling yellow!
 
 // More challenging
 let newElement = document.createElement("div");
